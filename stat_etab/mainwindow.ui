@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>855</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* General styling for the main window */
+QWidget {
+    background-color: #2C3E50;
+    font-family: 'Arial', sans-serif;
+    color: #ECF0F1;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Styling for all QLabel widgets (section labels) */
+QLabel {
+    font-size: 20px;
+    color: #ECF0F1;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid #3498DB; /* Underline for a modern look */
+}
+
+/* Focused QLabel styles for each section */
+QLabel#math {
+    color: #3498DB;
+}
+
+QLabel#science {
+    color: #1ABC9C;
+}
+
+QLabel#sports {
+    color: #E67E22;
+}
+
+QLabel#eco {
+    color: #2ECC71;
+}
+
+QLabel#tech {
+    color: #F39C12;
+}
+
+QLabel#info {
+    color: #9B59B6;
+}
+
+/* Styling for QLineEdit widgets (input fields) */
+QLineEdit {
+    background-color: #34495E;
+    color: #ECF0F1;
+    border: 2px solid #7F8C8D;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focused QLineEdit styles */
+QLineEdit:focus {
+    border: 2px solid #3498DB;
+    background-color: #2C3E50;
+}
+
+/* Hover effect for QLineEdit */
+QLineEdit:hover {
+    border: 2px solid #2980B9;
+}
+
+/* Styling for buttons (if any) */
+QPushButton {
+    background-color: #3498DB;
+    color: #ECF0F1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: #2980B9;
+}
+
+/* Styling for main window layout */
+QWidget#mainWindow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for each section (Math, Science, etc.) containers */
+QWidget#sectionContainer {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #34495E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+QWidget#sectionContainer:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Add custom scrollbars for better aesthetics */
+QScrollArea {
+    border: none;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #34495E;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #2980B9;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #3498DB;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background-color: #34495E;
+    border: none;
+}
+
+/* Styling for window border */
+QWidget#mainWindow {
+    border: 5px solid #2980B9;
+    border-radius: 20px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="send">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>200</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>send</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="math_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>math</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="math">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sc">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="letter">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>190</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="eco">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>280</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sport">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>360</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tec">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>450</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="science">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>science</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>190</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>letter</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="eco_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>280</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>eco</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sports">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>360</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>sport</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tech">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>450</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>tec</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="info">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>70</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tech_2">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>80</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Info</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>855</width>
+     <height>60</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
